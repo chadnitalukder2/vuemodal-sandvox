@@ -1,36 +1,34 @@
 <template>
   <div id="app">
-    <img  src="./assets/logo.png">
+    <img src="./assets/logo.png" />
     <h1>Hello, I'm a Vue Project</h1>
     <button @click="showModal" class="btn">Click me!</button>
-    <Modal v-show="isModalVisible"  @close="closeModl"/>
+    <Modal v-show="isModalVisible" @close="closeModl" />
   </div>
- 
-  
 </template>
 
 <script>
-import Modal from './components/A_Modal.vue'
+import Modal from "./components/A_Modal.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    Modal
+    Modal,
   },
-  data(){
-    return{
-      isModalVisible: false
+  data() {
+    return {
+      isModalVisible: false,
     };
   },
-  methods:{
-    showModal(){
+  methods: {
+    showModal() {
       this.isModalVisible = true;
     },
-    closeModl(){
-      this.isModalVisible = false
-    }
-  }
-}
+    closeModl() {
+      this.isModalVisible = false;
+    },
+  },
+};
 </script>
 
 <style>
@@ -42,7 +40,7 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
-.btn{
+.btn {
   color: white;
   background: #000;
   border: 1px solid #828282;
